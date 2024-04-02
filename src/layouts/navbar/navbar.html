@@ -4,33 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="../../layouts/navbar/navbar.css">
     <title>Responsive Navbar</title>
 </head>
 <body>
 <header>
     <nav class="navbar">
         <div class="logo">
-            <a href="/">
+            <a href="../../layouts/navbar/navbar.html">
                 <img src="https://media.istockphoto.com/id/1333173828/fr/vectoriel/drapeau-%C3%A0-damier-comp%C3%A9tition-arriv%C3%A9e-d%C3%A9part-ic%C3%B4ne-noire-gagnante.jpg?s=612x612&w=0&k=20&c=3OyV0wPDtarrwyoHn4SqOf5THE2kN0tfLu3dRj_EwDg="
 
                      alt="gfg_logo">
             </a>
         </div>
-        <div class="hamburger-menu">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-        </div>
-        <div class="nav-menu hide">
-            <a href="#">Home</a>
-            <a href="#">Pilots and Tracks</a>
-            <a href="#">Creat your Players</a>
-            <a href="#">Creat your Tracks</a>
-            <a href="#">Run championship</a>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#">Home</a>
+                <a href="../../templates/games/games.html">Pilots and Tracks</a>
+                <a href="../../templates/creatYourPlayer/creatYourPlayer.html">Creat your Player</a>
+                <a href="#">Creat your Track</a>
+                <a href="#">Run championship</a>
+            </div>
         </div>
     </nav>
 </header>
 </body>
-<script src="./navbar.js"></script>
+<script src="../../layouts/navbar/navbar.js">
+</script>
 </html>

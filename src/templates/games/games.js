@@ -480,25 +480,7 @@ function displayTracks(games) {
     playersListContainer.innerHTML = html;
 }
 
-function addPlayer() {
-    return {
-        name: document.getElementById("name").value,
-        firstName: document.getElementById("firstName").value,
-        team: document.getElementById("team").value,
-        car: document.getElementById("car").value,
-        brand: document.getElementById("brand").value,
-        age: parseInt(document.getElementById("age").value),
-        score: 0
-    };
-}
-
-document.getElementById("playerForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-    let newPlayer = addPlayer();
-    players.push(newPlayer);
-    displayPlayers(players);
-    document.getElementById("playerForm").reset();
-});
-
 displayPlayers(players);
 displayTracks(games);
+console.log(localStorage)
+console.log(localStorage.players)
