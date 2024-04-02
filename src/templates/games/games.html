@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>VJS</title>
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        document.getElementById('navbar').innerHTML = xhr.responseText;
+                        // Inclure le script navbar.js ici pour qu'il soit exécuté après l'insertion de la navbar
+                        var script = document.createElement('script');
+                        script.src = '../../layouts/navbar/navbar.js';
+                        document.body.appendChild(script);
+                    } else {
+                        console.error('Erreur de chargement du navbar.');
+                    }
+                }
+            };
+            xhr.open('GET', '../../layouts/navbar/navbar.html', true);
+            xhr.send();
+        });
+    </script>
+</head>
+<body>
+<div id="navbar"></div>
+<h1>Liste des joueurs</h1>
+<div id="playersList"></div>
+<h1>Liste des Circuits</h1>
+<div id="gamesList"></div>
+<script src="../../templates/games/games.js"></script>
+</body>
+</html>
