@@ -9,13 +9,14 @@ body{
 }
 a{
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 1.3rem;
     font-weight: bold;
 }
 
-/* navbar styling */
+
 .navbar{
+    background-image: url("https://img.freepik.com/photos-gratuite/close-up-image-source-fraiche-herbe-verte_1232-2759.jpg");
     display: flex;
     height: 5rem;
     justify-content: space-between;
@@ -24,14 +25,21 @@ a{
     border-bottom: 2px solid rgb(223, 251, 219);
 }
 
-/* logo style */
+
 .logo img{
+    border-radius: 40px;
+    border: 3px black groove;
+    box-shadow: 0 5px 10px darkgrey;
+    background: white;
+    display: flex;
+    align-items: center;
     width: 4rem;
     height: 4rem;
     margin-left:1rem;
 }
 
 .hamburger-menu{
+    background: white;
     padding-right: 1.5rem;
     cursor: pointer;
 }
@@ -50,24 +58,25 @@ a{
     width: 94%;
     top: 6rem;
     left: 18px;
-    background-color: rgb(255, 255, 255);
+    background: #3466AF;
     font-weight: 600;
 
 }
 .nav-menu a{
+    background: white;
     display: block;
     text-align: center;
     padding: 5px 0;
 }
 .nav-menu a:hover{
-    background-color: rgb(223, 251, 219);
+    background-color: #FFCB05;
 }
 
 .hide{
     display: none;
 }
 
-/* for Desktop view */
+
 @media screen and (min-width:600px){
     .navbar{
         justify-content: space-around;
@@ -80,6 +89,7 @@ a{
         background: none;
     }
     .nav-menu a{
+        background: white;
         display: inline-block;
         padding: 15px 20px;
     }
@@ -91,8 +101,9 @@ a{
         display: none;
     }
 }
-/* Dropdown Button */
+
 .dropbtn {
+    border-radius: 20px;
     background-color: #3498DB;
     color: white;
     padding: 16px;
@@ -101,37 +112,40 @@ a{
     cursor: pointer;
 }
 
-/* Dropdown button on hover & focus */
+
 .dropbtn:hover, .dropbtn:focus {
     background-color: #2980B9;
 }
 
-/* The container <div> - needed to position the dropdown content */
+
 .dropdown {
     position: relative;
     display: inline-block;
 }
 
-/* Dropdown Content (Hidden by Default) */
+
 .dropdown-content {
+    border-radius: 8px;
     display: none;
     position: absolute;
     background-color: #f1f1f1;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
-/* Links inside the dropdown */
+
 .dropdown-content a {
-    color: black;
+    border-radius: 8px;
+    background: white;
+    color: #3466AF;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    box-shadow: 0 5px 10px darkgrey;
 }
 
-/* Change color of dropdown links on hover */
+
 .dropdown-content a:hover {background-color: #ddd;}
 
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+
 .show {display:block;}
