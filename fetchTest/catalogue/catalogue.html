@@ -2,12 +2,17 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="../header/header.css" rel="stylesheet" type="text/css">
     <link href="data.css" rel="stylesheet" type="text/css">
     <link href="carousel.css" rel="stylesheet" type="text/css">
     <title>Fetch ou pas ?</title>
 </head>
-<header id="header" data-include="../header/header.html"></header>
+<header id="header" data-include="../header/header.html">
+    <button  id="btnSwitch">
+        <img src="🔄.png">
+    </button>
+</header>
 <body>
 <div class="slider__wrapper" id="slider__wrapper">
     <div class="slider">
@@ -33,9 +38,13 @@
         </div>
     </div>
 </div>
-<div id="div" class="div"></div>
+<div id="div" class="div" data-aos="flip-left"></div>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="../header/includeHTML.js"></script>
 <script src="../header/navbar.js"></script>
 <script src="data.js"></script>
+<script>
+    AOS.init();
+</script>
 </body>
 </html>

@@ -19,7 +19,7 @@ a{
     background: #FFCB05;
     display: flex;
     height: 5rem;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 3rem;
     border-bottom: 2px dashed #3466AF;
@@ -111,6 +111,7 @@ a{
     padding: 16px;
     font-size: 16px;
     cursor: pointer;
+    margin: 30px;
 }
 
 
