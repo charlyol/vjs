@@ -16,20 +16,20 @@ a{
 
 
 .navbar{
-    background-image: url("https://img.freepik.com/photos-gratuite/close-up-image-source-fraiche-herbe-verte_1232-2759.jpg");
+    background: #FFCB05;
     display: flex;
     height: 5rem;
     justify-content: space-between;
     align-items: center;
-    padding-top: 1rem;
-    border-bottom: 2px solid rgb(223, 251, 219);
+    padding: 3rem;
+    border-bottom: 2px dashed #3466AF;
 }
 
 
 .logo img{
     border-radius: 40px;
     border: 3px black groove;
-    box-shadow: 0 5px 10px darkgrey;
+    box-shadow: 0 5px 10px white;
     background: white;
     display: flex;
     align-items: center;
@@ -103,12 +103,13 @@ a{
 }
 
 .dropbtn {
+    border: 3px black groove;
+    box-shadow: 0 5px 10px #3498DB;
     border-radius: 20px;
     background-color: #3498DB;
     color: white;
     padding: 16px;
     font-size: 16px;
-    border: none;
     cursor: pointer;
 }
 

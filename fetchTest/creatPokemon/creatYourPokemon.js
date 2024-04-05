@@ -11,7 +11,7 @@ function addPokemon() {
 }
 
 function getPokemonFromStorage() {
-    var pokemonString = localStorage.getItem('pokemon');
+    let pokemonString = localStorage.getItem('pokemon');
     return pokemonString ? JSON.parse(pokemonString) : [];
 }
 

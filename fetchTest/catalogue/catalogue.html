@@ -4,11 +4,36 @@
     <meta charset="UTF-8">
     <link href="../header/header.css" rel="stylesheet" type="text/css">
     <link href="data.css" rel="stylesheet" type="text/css">
+    <link href="carousel.css" rel="stylesheet" type="text/css">
     <title>Fetch ou pas ?</title>
 </head>
 <header id="header" data-include="../header/header.html"></header>
 <body>
-<div id="div"></div>
+<div class="slider__wrapper" id="slider__wrapper">
+    <div class="slider">
+        <div class="slide active">
+            <a href="../creatPokemon/creatYourPokemon.html">
+                <img src="Bandeau%20pokemon.png" class="bandeau">
+            </a>
+        </div>
+        <div class="slide">
+            <a href="https://www.dupuis.com/">
+            <img src="Bandeau%20charly.jpg">
+            </a>
+        </div>
+        <div class="slide">
+            <a href="../creatPokemon/creatYourPokemon.html">
+                <img src="Bandeau%20pokemon.png">
+            </a>
+        </div>
+        <div class="slide">
+            <a href="https://www.dupuis.com/">
+            <img src="Bandeau%20pub.jpg">
+            </a>
+        </div>
+    </div>
+</div>
+<div id="div" class="div"></div>
 <script src="../header/includeHTML.js"></script>
 <script src="../header/navbar.js"></script>
 <script src="data.js"></script>

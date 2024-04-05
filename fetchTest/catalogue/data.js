@@ -4,8 +4,9 @@ async function callApi(toto) {
         const div = document.getElementById("div");
         div.style.display = 'none';
         const header = document.getElementById("header");
-        console.log(header)
         header.style.display = 'none';
+        const slider = document.getElementById("slider__wrapper");
+        slider.style.display = 'none';
 
         // Créer et afficher le loader
         const loader = document.createElement('img');
@@ -20,20 +21,32 @@ async function callApi(toto) {
         const data = await api.json();
 
         console.log(data);
+        console.log(localStorage)
+        console.log(localStorage.pokemon)
 
         setTimeout(() => {
             div.style.display = 'grid';
             header.style.display = 'block';
+            slider.style.display = 'block';
             loader.style.display = 'none';
 
             let j = 0
             while (j < localStorage.length) {
                 const pokemonData = JSON.parse(localStorage.getItem('pokemon'));
                 if (pokemonData) {
-                    pokemonData.forEach(pokemon => {
+                    pokemonData.forEach((pokemon, index) => {
                         const newDiv = document.createElement("div");
-                        newDiv.classList.add("card");
+                        newDiv.classList.add("local");
                         div.appendChild(newDiv);
+
+                        const supElement = document.createElement("button");
+                        supElement.textContent = "❌";
+                        supElement.addEventListener("click", function() {
+                            newDiv.remove();
+                            pokemonData.splice(index, 1);
+                            localStorage.setItem('pokemon', JSON.stringify(pokemonData));
+                        });
+                        newDiv.appendChild(supElement);
 
                         const nameElement = document.createElement("p");
                         nameElement.textContent = `Name: ${pokemon.name}`;
@@ -46,12 +59,15 @@ async function callApi(toto) {
                         const imageElement = document.createElement("img");
                         imageElement.src = pokemon.image;
                         newDiv.appendChild(imageElement);
+
                     });
                 } else {
                     console.log("Aucun Pokémon trouvé dans le localStorage.");
                 }
                 j++;
             }
+
+
             let i = 1
             while (i < 50) {
                 const newDiv = document.createElement("div");
@@ -121,5 +137,40 @@ function getPokemonFromStorage() {
     return pokemonString ? JSON.parse(pokemonString) : [];
 }
 
-console.log(localStorage)
-console.log(localStorage.pokemon)
+
+function slider() {
+    let slides = document.querySelectorAll(".slide"),
+        slider = document.querySelector(".slider"),
+        last = slider.lastElementChild,
+        first = slider.firstElementChild,
+        btn = document.querySelectorAll(".btn");
+
+    slider.insertBefore(last, first);
+
+    btn.forEach(btn => {
+        btn.addEventListener("click", movement);
+    });
+    setInterval(function()
+    {
+        movement({target:{id:"next"}});
+    }, 3000);
+    function movement(e) {
+        slider = document.querySelector(".slider");
+        last = slider.lastElementChild;
+        first = slider.firstElementChild;
+
+        const activeSlide = document.querySelector(".active");
+
+        if (e.target.id === "next") {
+            slider.insertBefore(first, last.nextSibling);
+
+            activeSlide.classList.remove("active");
+            activeSlide.nextElementSibling.classList.add("active");
+        } else {
+            slider.insertBefore(last, first);
+            activeSlide.classList.remove("active");
+            activeSlide.previousElementSibling.classList.add("active");
+        }
+    }
+}
+slider();
