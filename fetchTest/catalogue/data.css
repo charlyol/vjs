@@ -5,13 +5,18 @@
     transform: translate(-50%, -50%);
 }
 
+
 .div {
     background: #FFCB05;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-auto-rows: 300px;
-    grid-gap: 25px ;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     padding: 2rem;
+}
+.switchOrientation{
+    flex-direction: column !important;
 }
 
 .card, .local{
@@ -25,17 +30,37 @@
     justify-content: center;
     align-items: center;
     box-shadow: 0 10px 20px gray;
+    height: 300px;
+    width: 200px;
+    padding: 10px;
+    margin: 20px;
 }
 div .local button {
     border: none;
 }
+header {
+    background: #FFCB05;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+header button img {
+    height: 20px;
+    width: 20px;
+    background: transparent;
+    border-radius: 40px;
+}
 
 .card img, .local img {
+    border-radius: 20px;
     background: white;
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    padding: 1rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
 }
 
 .card p {
