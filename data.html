@@ -1,206 +1,215 @@
-let players = [
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>VJS</title>
+</head>
+<body>
+<pre>
+[
     {
-        name: "Verstappen",
-        firstName: "Max",
-        team: "Red Bull Racing",
-        car: "RB20",
-        brand: "Honda",
-        age: 26,
-        score: 0,
-        img: "https://cdn-5.motorsport.com/images/mgl/6D1XbeV0/s300/max-verstappen-red-bull-racing.webp"
+        "name": "Verstappen",
+        "firstName": "Max",
+        "team": "Red Bull Racing",
+        "car": "RB20",
+        "brand": "Honda",
+        "age": 26,
+        "score": 0,
+        "img": "https://cdn-5.motorsport.com/images/mgl/6D1XbeV0/s300/max-verstappen-red-bull-racing.webp"
     },
     {
-        name: "Perez",
-        firstName: "Sergio",
-        team: "Red Bull Racing - Honda",
-        car: "RB20",
-        brand: "Honda",
-        age: 34,
-        score: 0,
-        img: "https://cdn-6.motorsport.com/images/mgl/2y3qRdo6/s300/sergio-perez-red-bull-racing.webp"
+        "name": "Perez",
+        "firstName": "Sergio",
+        "team": "Red Bull Racing - Honda",
+        "car": "RB20",
+        "brand": "Honda",
+        "age": 34,
+        "score": 0,
+        "img": "https://cdn-6.motorsport.com/images/mgl/2y3qRdo6/s300/sergio-perez-red-bull-racing.webp"
     },
     {
-        name: "Hamilton",
-        firstName: "Lewis",
-        team: "Mercedes-AMG Petronas Formula One Team",
-        car: "W15",
-        brand: "Mercedes-AMG",
-        age: 39,
-        score: 0,
-        img: "https://cdn-1.motorsport.com/images/mgl/YEQ1pGwY/s300/lewis-hamilton-mercedes.webp"
+        "name": "Hamilton",
+        "firstName": "Lewis",
+        "team": "Mercedes-AMG Petronas Formula One Team",
+        "car": "W15",
+        "brand": "Mercedes-AMG",
+        "age": 39,
+        "score": 0,
+        "img": "https://cdn-1.motorsport.com/images/mgl/YEQ1pGwY/s300/lewis-hamilton-mercedes.webp"
     },
     {
-        name: "Russell",
-        firstName: "George",
-        team: "Mercedes-AMG Petronas Formula One Team",
-        car: "W15",
-        brand: "Mercedes-AMG",
-        age: 26,
-        score: 0,
-        img: "https://cdn-8.motorsport.com/images/mgl/Y998Zb7Y/s300/george-russell-mercedes.webp"
+        "name": "Russell",
+        "firstName": "George",
+        "team": "Mercedes-AMG Petronas Formula One Team",
+        "car": "W15",
+        "brand": "Mercedes-AMG",
+        "age": 26,
+        "score": 0,
+        "img": "https://cdn-8.motorsport.com/images/mgl/Y998Zb7Y/s300/george-russell-mercedes.webp"
     },
     {
-        name: "Leclerc",
-        firstName: "Charles",
-        team: "Scuderia Ferrari",
-        car: "SF-24",
-        brand: "Ferrari",
-        age: 25,
-        score: 0,
-        img: "https://cdn-2.motorsport.com/images/mgl/YMdm7R32/s300/charles-leclerc-ferrari.webp"
+        "name": "Leclerc",
+        "firstName": "Charles",
+        "team": "Scuderia Ferrari",
+        "car": "SF-24",
+        "brand": "Ferrari",
+        "age": 25,
+        "score": 0,
+        "img": "https://cdn-2.motorsport.com/images/mgl/YMdm7R32/s300/charles-leclerc-ferrari.webp"
     },
     {
-        name: "Sainz",
-        firstName: "Carlos",
-        team: "Scuderia Ferrari",
-        car: "SF-24",
-        brand: "Ferrari",
-        age: 29,
-        score: 0,
-        img: "https://cdn-3.motorsport.com/images/mgl/63vnZMbY/s300/carlos-sainz-ferrari.webp"
+        "name": "Sainz",
+        "firstName": "Carlos",
+        "team": "Scuderia Ferrari",
+        "car": "SF-24",
+        "brand": "Ferrari",
+        "age": 29,
+        "score": 0,
+        "img": "https://cdn-3.motorsport.com/images/mgl/63vnZMbY/s300/carlos-sainz-ferrari.webp"
     },
     {
-        name: "Norris",
-        firstName: "Lando",
-        team: "McLaren F1 Team",
-        car: "MCL38",
-        brand: "Mclaren",
-        age: 24,
-        score: 0,
-        img: "https://cdn-4.motorsport.com/images/mgl/YEQ1jk1Y/s300/lando-norris-mclaren.webp"
+        "name": "Norris",
+        "firstName": "Lando",
+        "team": "McLaren F1 Team",
+        "car": "MCL38",
+        "brand": "Mclaren",
+        "age": 24,
+        "score": 0,
+        "img": "https://cdn-4.motorsport.com/images/mgl/YEQ1jk1Y/s300/lando-norris-mclaren.webp"
     },
     {
-        name: "Piastri",
-        firstName: "Oscar",
-        team: "McLaren F1 Team",
-        car: "MCL38",
-        brand: "Mclaren",
-        age: 22,
-        score: 0,
-        img: "https://cdn-4.motorsport.com/images/mgl/YBe5yNn2/s300/oscar-piastri-mclaren.webp"
+        "name": "Piastri",
+        "firstName": "Oscar",
+        "team": "McLaren F1 Team",
+        "car": "MCL38",
+        "brand": "Mclaren",
+        "age": 22,
+        "score": 0,
+        "img": "https://cdn-4.motorsport.com/images/mgl/YBe5yNn2/s300/oscar-piastri-mclaren.webp"
     },
     {
-        name: "Stroll",
-        firstName: "Lance",
-        team: "Aston Martin F1 Team",
-        car: "AMR24",
-        brand: "Aston Martin",
-        age: 25,
-        score: 0,
-        img: "https://cdn-5.motorsport.com/images/mgl/0ZRQlG80/s300/lance-stroll-aston-martin.webp"
+        "name": "Stroll",
+        "firstName": "Lance",
+        "team": "Aston Martin F1 Team",
+        "car": "AMR24",
+        "brand": "Aston Martin",
+        "age": 25,
+        "score": 0,
+        "img": "https://cdn-5.motorsport.com/images/mgl/0ZRQlG80/s300/lance-stroll-aston-martin.webp"
     },
     {
-        name: "Alonso",
-        firstName: "Fernando",
-        team: "Aston Martin F1 Team",
-        car: "AMR24",
-        brand: "Aston Martin",
-        age: 42,
-        score: 0,
-        img: "https://cdn-2.motorsport.com/images/mgl/0ZRQbbN0/s300/fernando-alonso-aston-martin-r.webp"
+        "name": "Alonso",
+        "firstName": "Fernando",
+        "team": "Aston Martin F1 Team",
+        "car": "AMR24",
+        "brand": "Aston Martin",
+        "age": 42,
+        "score": 0,
+        "img": "https://cdn-2.motorsport.com/images/mgl/0ZRQbbN0/s300/fernando-alonso-aston-martin-r.webp"
     },
     {
-        name: "Ocon",
-        firstName: "Esteban",
-        team: "Alpine F1 Team",
-        car: "A524",
-        brand: "Alpine",
-        age: 27,
-        score: 0,
-        img: "https://cdn-6.motorsport.com/images/mgl/0k7Vlw80/s300/esteban-ocon-alpine.webp"
+        "name": "Ocon",
+        "firstName": "Esteban",
+        "team": "Alpine F1 Team",
+        "car": "A524",
+        "brand": "Alpine",
+        "age": 27,
+        "score": 0,
+        "img": "https://cdn-6.motorsport.com/images/mgl/0k7Vlw80/s300/esteban-ocon-alpine.webp"
     },
     {
-        name: "Gasly",
-        firstName: "Pierre",
-        team: "Alpine F1 Team",
-        car: "A524",
-        brand: "Alpine",
-        age: 28,
-        score: 0,
-        img: "https://cdn-4.motorsport.com/images/mgl/2eADy3P2/s300/pierre-gasly-alpine.webp"
+        "name": "Gasly",
+        "firstName": "Pierre",
+        "team": "Alpine F1 Team",
+        "car": "A524",
+        "brand": "Alpine",
+        "age": 28,
+        "score": 0,
+        "img": "https://cdn-4.motorsport.com/images/mgl/2eADy3P2/s300/pierre-gasly-alpine.webp"
     },
     {
-        name: "Albon",
-        firstName: "Alexander",
-        team: "Williams Racing",
-        car: "FW46",
-        brand: "Williams",
-        age: 28,
-        score: 0,
-        img: "https://cdn-5.motorsport.com/images/mgl/0rG38zm2/s300/alex-albon-williams.webp"
+        "name": "Albon",
+        "firstName": "Alexander",
+        "team": "Williams Racing",
+        "car": "FW46",
+        "brand": "Williams",
+        "age": 28,
+        "score": 0,
+        "img": "https://cdn-5.motorsport.com/images/mgl/0rG38zm2/s300/alex-albon-williams.webp"
     },
     {
-        name: "Sargeant",
-        firstName: "Logan",
-        team: "Williams Racing",
-        car: "FW46",
-        brand: "Williams",
-        age: 23,
-        score: 0,
-        img: "https://cdn-5.motorsport.com/images/mgl/6zQej9eY/s300/logan-sargeant-williams.webp"
+        "name": "Sargeant",
+        "firstName": "Logan",
+        "team": "Williams Racing",
+        "car": "FW46",
+        "brand": "Williams",
+        "age": 23,
+        "score": 0,
+        "img": "https://cdn-5.motorsport.com/images/mgl/6zQej9eY/s300/logan-sargeant-williams.webp"
     },
     {
-        name: "Tsunoda",
-        firstName: "Yuki",
-        team: "Scuderia AlphaTauri - Honda",
-        car: "VCARB 01",
-        brand: "Honda",
-        age: 23,
-        score: 0,
-        img: "https://cdn-1.motorsport.com/images/mgl/2wBdQNB0/s300/yuki-tsunoda-racing-bulls.webp"
+        "name": "Tsunoda",
+        "firstName": "Yuki",
+        "team": "Scuderia AlphaTauri - Honda",
+        "car": "VCARB 01",
+        "brand": "Honda",
+        "age": 23,
+        "score": 0,
+        "img": "https://cdn-1.motorsport.com/images/mgl/2wBdQNB0/s300/yuki-tsunoda-racing-bulls.webp"
     },
     {
-        name: "Ricciardo",
-        firstName: "Daniel",
-        team: "Scuderia AlphaTauri - Honda",
-        car: "VCARB 01",
-        brand: "Honda",
-        age: 34,
-        score: 0,
-        img: "https://cdn-8.motorsport.com/images/mgl/2d1ZDk5Y/s300/daniel-ricciardo-racing-bulls.webp"
+        "name": "Ricciardo",
+        "firstName": "Daniel",
+        "team": "Scuderia AlphaTauri - Honda",
+        "car": "VCARB 01",
+        "brand": "Honda",
+        "age": 34,
+        "score": 0,
+        "img": "https://cdn-8.motorsport.com/images/mgl/2d1ZDk5Y/s300/daniel-ricciardo-racing-bulls.webp"
     },
     {
-        name: "Bottas",
-        firstName: "Valtteri",
-        team: "Alfa Romeo Racing",
-        car: "C44",
-        brand: "Alfa Romeo",
-        age: 34,
-        score: 0,
-        img: "https://cdn-2.motorsport.com/images/mgl/YBe51WB2/s300/valtteri-bottas-stake-f1-team-.webp"
+        "name": "Bottas",
+        "firstName": "Valtteri",
+        "team": "Alfa Romeo Racing",
+        "car": "C44",
+        "brand": "Alfa Romeo",
+        "age": 34,
+        "score": 0,
+        "img": "https://cdn-2.motorsport.com/images/mgl/YBe51WB2/s300/valtteri-bottas-stake-f1-team-.webp"
     },
     {
-        name: "Zhou",
-        firstName: "Guanyu",
-        team: "Alfa Romeo Racing",
-        car: "C44",
-        brand: "Alfa Romeo",
-        age: 24,
-        score: 0,
-        img: "https://cdn-6.motorsport.com/images/mgl/68yrEnG0/s300/zhou-guanyu-stake-f1-team-kick.webp"
+        "name": "Zhou",
+        "firstName": "Guanyu",
+        "team": "Alfa Romeo Racing",
+        "car": "C44",
+        "brand": "Alfa Romeo",
+        "age": 24,
+        "score": 0,
+        "img": "https://cdn-6.motorsport.com/images/mgl/68yrEnG0/s300/zhou-guanyu-stake-f1-team-kick.webp"
     },
     {
-        name: "Magnussen",
-        firstName: "Kevin",
-        team: "Haas F1 Team",
-        car: "VF24",
-        brand: "Haas",
-        age: 31,
-        score: 0,
-        img: "https://cdn-8.motorsport.com/images/mgl/6gp9X9a0/s300/kevin-magnussen-haas-f1-team.webp"
+        "name": "Magnussen",
+        "firstName": "Kevin",
+        "team": "Haas F1 Team",
+        "car": "VF24",
+        "brand": "Haas",
+        "age": 31,
+        "score": 0,
+        "img": "https://cdn-8.motorsport.com/images/mgl/6gp9X9a0/s300/kevin-magnussen-haas-f1-team.webp"
     },
     {
-        name: "Hulkenberg",
-        firstName: "Nico",
-        team: "Haas F1 Team",
-        car: "VF24",
-        brand: "Haas",
-        age: 36,
-        score: 0,
-        img: "https://cdn-9.motorsport.com/images/mgl/0rG3w3m2/s300/nico-hulkenberg-haas-f1-team.webp"
-    },
+        "name": "Hulkenberg",
+        "firstName": "Nico",
+        "team": "Haas F1 Team",
+        "car": "VF24",
+        "brand": "Haas",
+        "age": 36,
+        "score": 0,
+        "img": "https://cdn-9.motorsport.com/images/mgl/0rG3w3m2/s300/nico-hulkenberg-haas-f1-team.webp"
+    }
 ]
-let games = [
+
+[
     {
         name: "Circuit International de Bahrein",
         Country: "Bahrein",
@@ -418,7 +427,7 @@ let games = [
         img: "https://www.automobile-magazine.fr/img/f1/circuit/abu-dhabi.webp"
     }
 ]
-let scores = [
+[
     {
         place: 1,
         pointsWin: 25
@@ -505,26 +514,6 @@ let scores = [
     },
 ]
 
-function displayPlayers(players) {
-    const playersListContainer = document.getElementById("playersList");
-    let html = "<ul>";
-    players.forEach(player => {
-        html += `<li>${player.firstName} ${player.name} - ${player.team} (${player.car} - ${player.brand}) - Age : ${player.age} - Score: ${player.score} - <img src="${player.img}" alt="${player.firstName} ${player.name}"></li>`;
-    });
-    html += "</ul>";
-    playersListContainer.innerHTML = html;
-}
-function displayTracks(games) {
-    const playersListContainer = document.getElementById("gamesList");
-    let html = "<ul>";
-    games.forEach(games => {
-        html += `<li>${games.name} Pays :${games.Country} - ${games.Date} Nombre de tour : ${games.NumberOfRounds} - Distance : ${games.Length} m - Nombre de DRS : ${games.NumberOfDRSZones} - <img src="${games.img}" alt="${games.name} ${games.Country}"></li>`;
-    });
-    html += "</ul>";
-    playersListContainer.innerHTML = html;
-}
-
-displayPlayers(players);
-displayTracks(games);
-console.log(localStorage)
-console.log(localStorage.players)
+</pre>
+</body>
+</html>
