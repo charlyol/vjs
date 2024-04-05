@@ -53,8 +53,8 @@ function displayPokemonFromStorage() {
     pokemonData.forEach((pokemon, index) => {
         const newDiv = document.createElement("div");
         newDiv.classList.add("local");
-        newDiv.dataset.aos = "flip-left";
-        newDiv.dataset.aos.offset="300";
+        newDiv.dataset.aos = "zoom-out-up";
+        newDiv.dataset.aos.offset="800";
         div.appendChild(newDiv);
 
         // Créer les éléments pour chaque pokemon...
@@ -85,8 +85,8 @@ function displayPokemonFromStorage() {
 function displayPokemon(pokemon, parentElement) {
     const newDiv = document.createElement("div");
     newDiv.classList.add("card");
-    newDiv.dataset.aos = "flip-left";
-    newDiv.dataset.aos.offset="300";
+    newDiv.dataset.aos = "zoom-out-up";
+    newDiv.dataset.aos.offset="800";
     parentElement.appendChild(newDiv);
 
     const pokedexIdElement = document.createElement("p");
@@ -139,7 +139,7 @@ function initializeSlider() {
     setInterval(function()
     {
         movement({target:{id:"next"}});
-    }, 3000);
+    }, 3500);
     function movement(e) {
         slider = document.querySelector(".slider");
         last = slider.lastElementChild;
@@ -168,7 +168,7 @@ function getPokemonFromStorage() {
 async function main() {
     hideInitialElements();
     const loader = displayLoader();
-    await new Promise(resolve => setTimeout(resolve, 2500));
+    await new Promise(resolve => setTimeout(resolve, 3000));
     hideLoader(loader);
     displayPokemonFromStorage();
     await displayPokemonFromAPI("https://tyradex.tech/api/v1/pokemon", loader);
