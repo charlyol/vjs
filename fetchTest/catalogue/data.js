@@ -139,7 +139,7 @@ function initializeSlider() {
     setInterval(function()
     {
         movement({target:{id:"next"}});
-    }, 500);
+    }, 3000);
     function movement(e) {
         slider = document.querySelector(".slider");
         last = slider.lastElementChild;
