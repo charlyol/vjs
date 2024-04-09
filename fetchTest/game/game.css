@@ -44,6 +44,10 @@
     display: flex;
     flex-direction: column;
     justify-items: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
     /*transform: rotateY(180deg);*/
     /*transform: rotateY(180deg);*/
     /*border-radius: 30px;*/
