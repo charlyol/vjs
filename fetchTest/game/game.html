@@ -4,12 +4,39 @@
     <meta charset="UTF-8">
     <link href="../game/game.css" rel="stylesheet" type="text/css">
     <link href="../catalogue/data.css" rel="stylesheet" type="text/css">
+    <link href="../catalogue/carousel.css" rel="stylesheet" type="text/css">
     <link href="../header/header.css" rel="stylesheet" type="text/css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Games</title>
 </head>
 <header data-include="../header/header.html"></header>
 <body>
+<div class="slider__wrapper" id="slider__wrapper">
+    <div class="slider">
+        <div class="slide active">
+            <a href="../creatPokemon/creatYourPokemon.html">
+                <img src="../catalogue/Bandeau%20pokemon.png" class="bandeau">
+            </a>
+        </div>
+        <div class="slide">
+            <a href="https://www.dupuis.com/">
+                <img src="../catalogue/Bandeau%20charly.jpg">
+            </a>
+        </div>
+        <div class="slide">
+            <a href="../creatPokemon/creatYourPokemon.html">
+                <img src="../catalogue/Bandeau%20pokemon.png">
+            </a>
+        </div>
+        <div class="slide">
+            <a href="https://www.dupuis.com/">
+                <img src="../catalogue/Bandeau%20pub.jpg">
+            </a>
+        </div>
+    </div>
+</div>
 <div id="gameContainer"></div>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="../header/includeHTML.js"></script>
 <script src="../header/navbar.js"></script>
 <script src="../game/games.js"></script>
